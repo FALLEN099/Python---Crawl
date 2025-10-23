@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title> Books API Frontend</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 20px; background:#f8f9fa; }
+  h1 { color:#333; }
+  input, button { padding:8px; margin:4px; border-radius:6px; border:1px solid #ccc; }
+  button { background:#007bff; color:#fff; cursor:pointer; }
+  button:hover { background:#0056b3; }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .card { background:#fff; padding:16px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,.06); margin-top:14px; }
+  .notice { margin-top:10px; font-weight:bold; }
+  table { width:100%; border-collapse:collapse; margin-top:14px; }
+  th, td { border:1px solid #e5e7eb; padding:8px; font-size:14px; }
+  tr:nth-child(even){ background:#f2f2f2; }
+  th { background:#007bff; color:#fff; text-align:left; }
+</style>
+</head>
+<body>
+<h1>Books Scraped</h1>
+
+<div class="card">
+  <div class="row">
+    <label for="apiKey">API Key (x-api-key):</label>
+    <input type="password" id="apiKey" placeholder="enter your API key" style="min-width:220px" />
+    <button onclick="saveKey()">Save</button>
+  </div>
+  <small>The key is temporarily stored in the browser's <code>localStorage</code> </small>
+</div>
+
+<div class="card">
+  <h3> View Books</h3>
+  <div class="row">
+    <label for="countryFilter">Filter by country:</label>
+    <input type="text" id="countryFilter" placeholder="e.g. France" />
+    <button onclick="loadBooks()">Load</button>
+  </div>
+</div>
+
+<div class="card">
+  <h3> Add Book</h3>
+  <div class="row">
+    <input type="text" id="title" placeholder="Title" />
+    <input type="text" id="price" placeholder="Price" />
+    <input type="text" id="availability" placeholder="Availability" />
+    <input type="number" id="star" placeholder="Star (1-5)" min="1" max="5" />
+    <input type="text" id="country" placeholder="Publisher Country" />
+    <input type="text" id="productUrl" placeholder="Product URL" style="min-width:260px" />
+    <button onclick="addBook()">Add</button>
+  </div>
+</div>
+
+<div class="card">
+  <h3>Delete Book</h3>
+  <div class="row">
+    <input type="text" id="deleteTitle" placeholder="Book Title" style="min-width:300px" />
+    <button onclick="deleteBook()">Delete</button>
+  </div>
+</div>
+
+<div class="notice" id="notice"></div>
+
+<table id="book-list">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Availability</th>
+      <th>Country</th>
+      <th>Star</th>
+    </tr>
+  </thead>
+  <tbody id="bookBody"></tbody>
+</table>
+
+<script>
+const API_BASE = ""; 
+
+
+function getKey() { return localStorage.getItem("x_api_key") || ""; }
+function saveKey() {
+  const k = document.getElementById("apiKey").value.trim();
+  localStorage.setItem("x_api_key", k);
+  notify(" Saved API key", "green");
+}
+(function preloadKey(){ document.getElementById("apiKey").value = getKey(); })();
+
+function notify(msg, color="black") {
+  const n = document.getElementById("notice");
+  n.textContent = msg; n.style.color = color;
+}
+
+async function loadBooks() {
+  const key = getKey();
+  const country = document.getElementById("countryFilter").value.trim();
+  let url = API_BASE + "/books";
+  if (country) url += "?country=" + encodeURIComponent(country);
+
+  try {
+    const res = await fetch(url, { headers: { "x-api-key": key } });
+    if (!res.ok) throw new Error(await readErr(res));
+    const data = await res.json();
+    const tbody = document.getElementById("bookBody");
+    tbody.innerHTML = "";
+    data.forEach(b => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${escapeHtml(b.title)}</td>
+        <td>${escapeHtml(b.price || "")}</td>
+        <td>${escapeHtml(b.availability || "")}</td>
+        <td>${escapeHtml(b.publisher_country || "")}</td>
+        <td>${b.star_rating ?? ""}</td>`;
+      tbody.appendChild(tr);
+    });
+    notify(` Loaded ${data.length} books`, "green");
+  } catch (e) {
+    notify(" " + e.message, "red");
+  }
+}
+
+async function addBook() {
+  const key = getKey();
+  const payload = {
+    title: document.getElementById("title").value.trim(),
+    price: document.getElementById("price").value.trim() || null,
+    availability: document.getElementById("availability").value.trim() || null,
+    star_rating: toIntOrNull(document.getElementById("star").value),
+    publisher_country: document.getElementById("country").value.trim() || null,
+    product_page_link: document.getElementById("productUrl").value.trim() || null,
+  };
+  if (!payload.title) { notify(" Title is required", "orange"); return; }
+
+  try {
+    const res = await fetch(API_BASE + "/books", {
+      method: "POST",
+      headers: { "x-api-key": key, "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+    if (!res.ok) throw new Error(await readErr(res));
+    notify(" Added", "green");
+    loadBooks();
+  } catch (e) {
+    notify(" " + e.message, "red");
+  }
+}
+
+async function deleteBook() {
+  const key = getKey();
+  const title = document.getElementById("deleteTitle").value.trim();
+  if (!title) { notify("⚠️ Title to delete is required", "orange"); return; }
+
+  try {
+    const res = await fetch(API_BASE + "/books/" + encodeURIComponent(title), {
+      method: "DELETE",
+      headers: { "x-api-key": key }
+    });
+    if (res.status !== 204) throw new Error(await readErr(res));
+    notify("🗑️ Deleted", "green");
+    loadBooks();
+  } catch (e) {
+    notify(" " + e.message, "red");
+  }
+}
+
+// helpers
+function toIntOrNull(v){ const n = parseInt(v,10); return Number.isFinite(n) ? n : null; }
+async function readErr(res){ 
+  let msg = res.status + " " + res.statusText; 
+  try { const j = await res.json(); if (j.detail) msg = j.detail; } catch(_) {}
+  return msg;
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+</script>
+</body>
+</html>

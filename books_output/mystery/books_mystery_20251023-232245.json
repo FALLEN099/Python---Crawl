@@ -1,0 +1,226 @@
+[
+  {
+    "Title": "Sharp Objects",
+    "Price": "Â£47.82",
+    "Availability": "In stock (20 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/sharp-objects_997/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "In a Dark, Dark Wood",
+    "Price": "Â£19.63",
+    "Availability": "In stock (18 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/in-a-dark-dark-wood_963/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "The Past Never Ends",
+    "Price": "Â£56.50",
+    "Availability": "In stock (16 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-past-never-ends_942/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "A Murder in Time",
+    "Price": "Â£16.64",
+    "Availability": "In stock (16 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/a-murder-in-time_877/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "The Murder of Roger Ackroyd (Hercule Poirot #4)",
+    "Price": "Â£44.10",
+    "Availability": "In stock (15 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-murder-of-roger-ackroyd-hercule-poirot-4_852/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "The Last Mile (Amos Decker #2)",
+    "Price": "Â£54.21",
+    "Availability": "In stock (14 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-last-mile-amos-decker-2_754/index.html",
+    "Star Rating": 2
+  },
+  {
+    "Title": "That Darkness (Gardiner and Renner #1)",
+    "Price": "Â£13.92",
+    "Availability": "In stock (14 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/that-darkness-gardiner-and-renner-1_743/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "Tastes Like Fear (DI Marnie Rome #3)",
+    "Price": "Â£10.69",
+    "Availability": "In stock (14 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/tastes-like-fear-di-marnie-rome-3_742/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "A Time of Torment (Charlie Parker #14)",
+    "Price": "Â£48.35",
+    "Availability": "In stock (14 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/a-time-of-torment-charlie-parker-14_657/index.html",
+    "Star Rating": 5
+  },
+  {
+    "Title": "A Study in Scarlet (Sherlock Holmes #1)",
+    "Price": "Â£16.73",
+    "Availability": "In stock (14 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/a-study-in-scarlet-sherlock-holmes-1_656/index.html",
+    "Star Rating": 2
+  },
+  {
+    "Title": "Poisonous (Max Revere Novels #3)",
+    "Price": "Â£26.80",
+    "Availability": "In stock (12 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/poisonous-max-revere-novels-3_627/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "Murder at the 42nd Street Library (Raymond Ambler #1)",
+    "Price": "Â£54.36",
+    "Availability": "In stock (12 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/murder-at-the-42nd-street-library-raymond-ambler-1_624/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "Most Wanted",
+    "Price": "Â£35.28",
+    "Availability": "In stock (12 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/most-wanted_623/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "Hide Away (Eve Duncan #20)",
+    "Price": "Â£11.84",
+    "Availability": "In stock (12 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "Boar Island (Anna Pigeon #19)",
+    "Price": "Â£59.48",
+    "Availability": "In stock (12 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/boar-island-anna-pigeon-19_613/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "The Widow",
+    "Price": "Â£27.26",
+    "Availability": "In stock (11 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-widow_609/index.html",
+    "Star Rating": 2
+  },
+  {
+    "Title": "Playing with Fire",
+    "Price": "Â£13.71",
+    "Availability": "In stock (11 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/playing-with-fire_602/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "What Happened on Beale Street (Secrets of the South Mysteries #2)",
+    "Price": "Â£25.37",
+    "Availability": "In stock (7 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/what-happened-on-beale-street-secrets-of-the-south-mysteries-2_506/index.html",
+    "Star Rating": 5
+  },
+  {
+    "Title": "The Bachelor Girl's Guide to Murder (Herringford and Watts Mysteries #1)",
+    "Price": "Â£52.30",
+    "Availability": "In stock (7 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-bachelor-girls-guide-to-murder-herringford-and-watts-mysteries-1_491/index.html",
+    "Star Rating": 5
+  },
+  {
+    "Title": "Delivering the Truth (Quaker Midwife Mystery #1)",
+    "Price": "Â£20.89",
+    "Availability": "In stock (7 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/delivering-the-truth-quaker-midwife-mystery-1_464/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "The Mysterious Affair at Styles (Hercule Poirot #1)",
+    "Price": "Â£24.80",
+    "Availability": "In stock (6 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-mysterious-affair-at-styles-hercule-poirot-1_452/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "In the Woods (Dublin Murder Squad #1)",
+    "Price": "Â£38.38",
+    "Availability": "In stock (6 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/in-the-woods-dublin-murder-squad-1_433/index.html",
+    "Star Rating": 2
+  },
+  {
+    "Title": "The Silkworm (Cormoran Strike #2)",
+    "Price": "Â£23.05",
+    "Availability": "In stock (3 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-silkworm-cormoran-strike-2_280/index.html",
+    "Star Rating": 5
+  },
+  {
+    "Title": "The Exiled",
+    "Price": "Â£43.45",
+    "Availability": "In stock (3 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-exiled_247/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "The Cuckoo's Calling (Cormoran Strike #1)",
+    "Price": "Â£19.21",
+    "Availability": "In stock (3 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-cuckoos-calling-cormoran-strike-1_239/index.html",
+    "Star Rating": 1
+  },
+  {
+    "Title": "Extreme Prey (Lucas Davenport #26)",
+    "Price": "Â£25.40",
+    "Availability": "In stock (3 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/extreme-prey-lucas-davenport-26_154/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "Career of Evil (Cormoran Strike #3)",
+    "Price": "Â£24.72",
+    "Availability": "In stock (3 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/career-of-evil-cormoran-strike-3_137/index.html",
+    "Star Rating": 2
+  },
+  {
+    "Title": "The No. 1 Ladies' Detective Agency (No. 1 Ladies' Detective Agency #1)",
+    "Price": "Â£57.70",
+    "Availability": "In stock (1 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-no-1-ladies-detective-agency-no-1-ladies-detective-agency-1_76/index.html",
+    "Star Rating": 4
+  },
+  {
+    "Title": "The Girl You Lost",
+    "Price": "Â£12.29",
+    "Availability": "In stock (1 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-girl-you-lost_66/index.html",
+    "Star Rating": 5
+  },
+  {
+    "Title": "The Girl In The Ice (DCI Erika Foster #1)",
+    "Price": "Â£15.85",
+    "Availability": "In stock (1 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/the-girl-in-the-ice-dci-erika-foster-1_65/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "Blood Defense (Samantha Brinkman #1)",
+    "Price": "Â£20.30",
+    "Availability": "In stock (1 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/blood-defense-samantha-brinkman-1_8/index.html",
+    "Star Rating": 3
+  },
+  {
+    "Title": "1st to Die (Women's Murder Club #1)",
+    "Price": "Â£53.98",
+    "Availability": "In stock (1 available)",
+    "Product Page Link": "https://books.toscrape.com/catalogue/1st-to-die-womens-murder-club-1_2/index.html",
+    "Star Rating": 1
+  }
+]
