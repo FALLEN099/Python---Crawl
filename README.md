@@ -13,7 +13,7 @@ requirements.txt: required libraries
 
 # 0) Install the required libraries in requirements.txt
 pip install -r requirements.txt
-How to run
+
 
 # 1) Part 1 Scrape
 Run python scrape_books.py
