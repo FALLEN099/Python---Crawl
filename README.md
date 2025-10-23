@@ -1,9 +1,12 @@
 Part 1 – Scraper (scrape_books.py): crawl categories from https://books.toscrape.com
- and save JSON per category (+ raw product HTML backup).
+and save JSON per category (+ raw product HTML backup).
+
 Part 2 – External API Integration (add_country.py): call REST Countries (with file cache) and add a random publisher_country for each book → writes books_with_country.json into each category folder.
+
 Part 3 – REST API (app.py): FastAPI that loads books_with_country.json on startup, authorization (header x-api-key), and serves a simple frontend at /frontend.
 
 books_output: folder save scraper data
+
 requirements.txt: required libraries
 
 
